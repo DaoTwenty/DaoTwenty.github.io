@@ -141,42 +141,7 @@
       100% { box-shadow: 0 0 0 12px transparent; }
     }
 
-    .status .ellipsis::after {
-      content: "";
-      animation: dots 1.5s steps(4, end) infinite;
-    }
 
-    @keyframes dots {
-      0%   { content: ""; }
-      25%  { content: "."; }
-      50%  { content: ".."; }
-      75%  { content: "..."; }
-    }
-
-    /* Looping "rendering" progress bar */
-    .progress {
-      width: min(22rem, 100%);
-      height: 4px;
-      margin: 0 auto 2.5rem;
-      border-radius: 4px;
-      background: var(--line);
-      overflow: hidden;
-    }
-
-    .progress::after {
-      content: "";
-      display: block;
-      height: 100%;
-      width: 40%;
-      border-radius: 4px;
-      background: linear-gradient(90deg, var(--a1), var(--a2), var(--a3));
-      animation: load 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-    }
-
-    @keyframes load {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(250%); }
-    }
 
     p.about {
       color: var(--muted);
@@ -224,10 +189,8 @@
 
     <div class="status">
       <span class="dot"></span>
-      <span>new site in progress<span class="ellipsis"></span></span>
+      <span>new site in progress</span>
     </div>
-
-    <div class="progress" aria-hidden="true"></div>
 
     <p class="about">
       Generative AI, music, and creative technology.
@@ -235,7 +198,6 @@
     </p>
 
     <nav class="links">
-      <a href="https://iat806.paultriana.com">IAT 806 work</a>
       <a href="https://metacreation.net/team/paul-triana">Metacreation Lab</a>
       <a href="https://github.com/DaoTwenty">GitHub</a>
       <a href="mailto:paul_triana@sfu.ca">Email</a>
